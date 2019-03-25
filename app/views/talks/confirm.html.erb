@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Talk</title>
+    <link rel="stylesheet" href="../../vendors/assets/stylesheets/talks.scss">
+  </head>
+  <body>
+   <header class ="header_bar">  
+   </header>
+   <wrapper class= "wra">
+    <h2>以下の内容で、つぶやきますか？</h2>
+    <h5>（※1文字以上140文字以下で記入できているか確認してください。<br>
+      　できていない場合は入力画面に戻ります。）</h5>
+    <%= form_with(model: @talk, local: true) do |form| %>
+     <%= form.hidden_field :content %>
+     <p>つぶやく内容<br>:<%= @talk.content %></p>
+     <%= form.submit  "つぶやく" %>
+     <%= form.submit  "書き直す",name: 'back' %>
+    <% end %>
+   </wrapper>
+   <footer class ="footer_bar">
+   </footer>
+  </body>
+</html>
