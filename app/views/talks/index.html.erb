@@ -8,7 +8,7 @@
   </head>
   <body>
    <wrapper class= "wra">
-    <header class ="header_bar">  
+    <header class ="header_bar">
     </header>
     <h1>つぶやき一覧</h1>
     <h3><%= notice%></h3>
@@ -18,12 +18,12 @@
       <td><%= talk.content %></td>
       <td><%= link_to '確認', talk_path(talk.id)%></td>
       <td><%= link_to '編集', edit_talk_path(talk.id)%></td>
-      <td><%= link_to '削除', talk_path(talk.id),method: :delete, data: 
-      {confirm: '本当に削除しますか？？'}%></td><br>
+      <td><%= link_to '削除', talk_path(talk.id),method: :delete, data:{ confirm: '本当に削除していいですか？' } %></td><br>
      </tr>
     <% end %>
+       </wrapper>
     <footer class ="footer_bar">
     </footer>
-   </wrapper>
+
   <body>
 </html>

@@ -15,7 +15,7 @@
       　できていない場合は入力画面に戻ります。）</h5>
     <%= form_with(model: @talk, local: true) do |form| %>
      <%= form.hidden_field :content %>
-     <p>つぶやく内容<br>:<%= @talk.content %></p>
+     <p>つぶやく内容:<br><%= @talk.content %></p>
      <%= form.submit  "つぶやく" %>
      <%= form.submit  "書き直す",name: 'back' %>
     <% end %>
