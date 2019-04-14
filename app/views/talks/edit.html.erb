@@ -10,21 +10,21 @@
     <header class ="header_bar">  
     </header>
     <wrapper class= "wra">
-     <h1>つぶやきを編集</h1>
-     <%= form_with(model: @talk, local: true) do |form| %>
-     <% if @talk.errors.any? %>
-      <div>
-       <h3><%= @talk.errors.count %>件のエラー</h3>
-       <h3><%= @talk.errors.full_messages %></h3>
-      </div>
-     <% end %>
-      <div class="talk_content">
-       <%= form.label :つぶやき %><br>
-       <%= form.text_field :content %>
-      </div>
-       <%= form.submit 'つぶやく'%>
-     <% end %>
-     <%= link_to 'つぶやき一覧', talks_path %>
+      <h1>つぶやきを編集</h1>
+      <%= form_with(model: @talk, local: true) do |form| %>
+        <% if @talk.errors.any? %>
+          <div>
+            <h3><%= @talk.errors.count %>件のエラー</h3>
+            <h3><%= @talk.errors.full_messages %></h3>
+          </div>
+        <% end %>
+        <div class="talk_content">
+          <%= form.label :つぶやき %><br>
+          <%= form.text_field :content %>
+        </div>
+        <%= form.submit 'つぶやく'%>
+      <% end %>
+      <%= link_to 'つぶやき一覧', talks_path %>
     </wrapper>
     <footer class ="footer_bar">
     </footer>

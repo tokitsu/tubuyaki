@@ -33,11 +33,11 @@ class TalksController < ApplicationController
   
   def update
     @talk = Talk.find(params[:id])
-     if @talk.update(talk_params)
+    if @talk.update(talk_params)
       redirect_to talks_path,notice:"つぶやきを編集しました！"
-     else
+    else
       render "edit"
-     end
+    end
   end
   
   def destroy

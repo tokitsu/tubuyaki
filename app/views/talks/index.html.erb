@@ -7,23 +7,22 @@
     <link rel="stylesheet" href="../../vendors/assets/stylesheets/talks.scss">
   </head>
   <body>
-   <wrapper class= "wra">
-    <header class ="header_bar">
-    </header>
-    <h1>つぶやき一覧</h1>
-    <h3><%= notice%></h3>
-    <%= link_to 'つぶやきを作成',new_talk_path %><br><br>
-    <% @talks.each do |talk|%>
-     <tr>
-      <td><%= talk.content %></td>
-      <td><%= link_to '確認', talk_path(talk.id)%></td>
-      <td><%= link_to '編集', edit_talk_path(talk.id)%></td>
-      <td><%= link_to '削除', talk_path(talk.id),method: :delete, data:{ confirm: '本当に削除していいですか？' } %></td><br>
-     </tr>
-    <% end %>
-       </wrapper>
+    <wrapper class= "wra">
+      <header class ="header_bar">
+      </header>
+      <h1>つぶやき一覧</h1>
+      <h3><%= notice%></h3>
+      <%= link_to 'つぶやきを作成',new_talk_path %><br><br>
+      <% @talks.each do |talk|%>
+        <tr>
+          <td><%= talk.content %></td>
+          <td><%= link_to '確認', talk_path(talk.id)%></td>
+          <td><%= link_to '編集', edit_talk_path(talk.id)%></td>
+          <td><%= link_to '削除', talk_path(talk.id),method: :delete, data:{ confirm: '本当に削除していいですか？' } %></td><br>
+        </tr>
+      <% end %>
+    </wrapper>
     <footer class ="footer_bar">
     </footer>
-
   <body>
 </html>
