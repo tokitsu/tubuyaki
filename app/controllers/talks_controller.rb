@@ -48,6 +48,7 @@ class TalksController < ApplicationController
   
   def confirm
     @talk = Talk.new(talk_params)
+    render :new if@talk.invalid?
   end  
   
   private
